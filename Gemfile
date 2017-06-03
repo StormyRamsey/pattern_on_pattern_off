@@ -10,6 +10,10 @@ end
 gem 'rails', '~> 5.0.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
+gem "activerecord"
+# this gem provides a connection between your Ruby classes to relational database tables
+gem "pry"
+# this gem allows access to REPL
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
