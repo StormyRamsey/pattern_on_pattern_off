@@ -1,0 +1,22 @@
+<h1>Edit Pattern</h1>
+
+<%= form_for @pattern do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url %>
+
+  <%= f.label :designer%>
+  <%= f.text_field :designer_name %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details_body %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= form_for @pattern, method: :delete do |f| %>
+  <%= f.submit "Delete!", class: "delete" %>
+<% end %>

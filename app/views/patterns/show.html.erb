@@ -1,0 +1,5 @@
+<h2><%= @pattern.name %> <%= link_to "(edit)", edit_pattern_path(@pattern) %></h2>
+<h4><%= @pattern.designer_name %></h4>
+
+<%= image_tag @pattern.photo_url, class: "pattern-photo" %>
+<h4><%= @pattern.details_body %></h4>
