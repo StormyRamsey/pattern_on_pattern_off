@@ -1,0 +1,4 @@
+<h1>Yarns</h1>
+<% @yarns.each do |yarn| %>
+  <div><%= link_to yarn.name, pattern_yarn_path(yarn) %> - <%= yarn.pattern.name %></div>
+<% end %>

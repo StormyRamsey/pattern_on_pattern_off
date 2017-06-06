@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-   get 'app/views/patterns/index'
-    resources :patterns
-  root 'app#views#patterns#index'
+   root to: 'app#views#patterns#index'
+
+    resources :patterns do
+      resources :yarns, except: [:index]
+    end
+
 end

@@ -3,23 +3,27 @@ class PatternsController < ApplicationController
     @patterns = Pattern.all
   end
 
+  def show
+    @pattern = Pattern.find(params[:id])
+    @yarn = @pattern.yarns.build
+  end
+
   def new
     @pattern = Pattern.new
   end
 
-  def create
-    @pattern = Pattern.new(params[:article])
-    @pattern.save
-    redirect_to @pattern
-  end
-
-  def show
+  def edit
     @pattern = Pattern.find(params[:id])
   end
 
+  def create
+  @pattern = Pattern.new(pattern_params)
 
-def edit
-  @pattern = Pattern.find(params[:id])
+  if @pattern.save
+    redirect_to @pattern
+  else
+    render 'new'
+  end
 end
 
   def update

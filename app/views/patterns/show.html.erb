@@ -3,3 +3,14 @@
 
 <%= image_tag @pattern.photo_url, class: "pattern-photo" %>
 <h4><%= @pattern.details_body %></h4>
+
+<h4>Yarn</h4>
+
+  <% @pattern.yarns.each do |yarn| %>
+
+      <img src="<%= yarn.yarn_url %>"/>
+      <p><%= yarn.name %></p>
+        <p><%= yarn.yards %></p>
+
+  <% end %>
+<%= link_to 'Edit Yarn', edit_pattern_yarn_path(@pattern) %>

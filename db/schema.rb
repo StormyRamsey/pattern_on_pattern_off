@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170604191543) do
+ActiveRecord::Schema.define(version: 20170605192638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,4 +24,13 @@ ActiveRecord::Schema.define(version: 20170604191543) do
     t.datetime "updated_at"
   end
 
+  create_table "yarns", force: :cascade do |t|
+    t.string  "name"
+    t.string  "yarn_url"
+    t.string  "yards"
+    t.integer "pattern_id"
+    t.index ["pattern_id"], name: "index_yarns_on_pattern_id", using: :btree
+  end
+
+  add_foreign_key "yarns", "patterns"
 end
