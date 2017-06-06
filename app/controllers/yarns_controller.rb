@@ -12,7 +12,7 @@ class YarnsController < ApplicationController
     yarn = Yarn.all
     @pattern = Pattern.find(params[:pattern_id])
     @yarn = @pattern.yarns.create(yarn_params)
-      redirect_to pattern_yarn_path(@pattern)
+      redirect_to @pattern
   end
 
   def show

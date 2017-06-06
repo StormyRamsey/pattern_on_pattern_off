@@ -1,4 +1,4 @@
 class Yarn < ActiveRecord::Base
   belongs_to :pattern
-  validates :name, :photo_url, :yards, {presence: true}
+  validates :name, :yarn_url, :yards, {presence: true}
 end
