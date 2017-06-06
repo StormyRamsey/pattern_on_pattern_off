@@ -11,6 +11,7 @@ gem 'rails', '~> 5.0.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 gem "activerecord"
+gem 'devise'
 # this gem provides a connection between your Ruby classes to relational database tables
 gem "pry"
 # this gem allows access to REPL

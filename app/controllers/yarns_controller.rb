@@ -35,6 +35,13 @@ class YarnsController < ApplicationController
     end
   end
 
+  def destroy
+    @pattern = Pattern.find(params[:pattern_id])
+    @yarn = @pattern.yarns.find(params[:id])
+    @yarn.destroy
+    redirect_to pattern_path(@pattern)
+  end
+
 private
   def yarn_params
     params.require(:yarn).permit(:yarn_url, :name, :yards)
