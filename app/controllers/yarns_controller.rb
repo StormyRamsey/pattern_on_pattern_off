@@ -1,9 +1,7 @@
 class YarnsController < ApplicationController
-
-
-  def show
-      @yarn = Yarn.find(params[:id])
-    end
+  def index
+    @yarn = Yarn.all
+  end
 
   def new
     @pattern = Pattern.find(params[:pattern_id])
@@ -11,12 +9,15 @@ class YarnsController < ApplicationController
   end
 
   def create
+    yarn = Yarn.all
     @pattern = Pattern.find(params[:pattern_id])
-    @yarn = @pattern.yarns.create!(yarn_params)
-    if @yarn.save
+    @yarn = @pattern.yarns.create(yarn_params)
       redirect_to pattern_yarn_path(@pattern)
-    end
   end
+
+  def show
+      @pattern = Pattern.find(params[:id])
+    end
 
   def edit
     @pattern = Pattern.find(params[:pattern_id])
@@ -34,6 +35,8 @@ class YarnsController < ApplicationController
     end
   end
 
-
-
+private
+  def yarn_params
+    params.require(:yarn).permit(:yarn_url, :name, :yards)
+  end
 end
