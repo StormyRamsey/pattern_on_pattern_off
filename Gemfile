@@ -15,8 +15,11 @@ gem 'devise'
 
 group :development, :test do
   gem 'sqlite3'
- end
-gem 'pg', group: :production
+end
+
+group :production do
+  gem 'pg'
+end
 # this gem provides a connection between your Ruby classes to relational database tables
 gem "pry"
 # this gem allows access to REPL
