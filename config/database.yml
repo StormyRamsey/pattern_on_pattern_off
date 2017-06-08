@@ -24,7 +24,15 @@ default: &default
 development:
   <<: *default
   database: pattern_on_pattern_off_development
-  
+
+  production:
+  <<: *default
+  database: db/production.sqlite3
+
+production:
+  <<: *default
+  adapter: postgresql
+  database: db/production.sqlite3
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
