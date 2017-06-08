@@ -13,9 +13,10 @@ gem 'rails', '~> 5.0.3'
 gem "activerecord"
 gem 'devise'
 
-gem 'sqlite3', group: :development
-gem 'pg', '0.18.1', group: :production
-gem 'rails_12factor', group: :production
+group :development, :test do
+  gem 'sqlite3'
+ end
+gem 'pg', group: :production
 # this gem provides a connection between your Ruby classes to relational database tables
 gem "pry"
 # this gem allows access to REPL
