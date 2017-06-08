@@ -1,3 +1,8 @@
+<div class="heading">
+<h1>New Pattern</h1>
+</div>
+
+<div class="new_form">
 <%= form_for @pattern do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
@@ -11,5 +16,6 @@
   <%= f.label :details %>
   <%= f.text_field :details_body %>
 
-  <%= f.submit %>
+  <%= f.submit class: "update" %>
 <% end %>
+</div>

@@ -13,3 +13,160 @@
  *= require_tree .
  *= require_self
  */
+
+ /*app.html.erb________________________________*/
+ body{
+   font-family:'Poppins', sans-serif;
+   background-color: #fefdfb;
+   color:#262626;
+   margin: 0px;
+ }
+
+ a {
+   color:#939393;
+   text-decoration: none;
+ }
+
+ p {
+   padding-left: 50px;
+ }
+h1 {
+  font-family: 'Bubbler One', sans-serif;
+  font-size: 42px;
+  text-align: center;
+  color:#939393;
+  text-decoration: none
+}
+ .nav_bar{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+ .app_heading{
+   font-family: 'Bubbler One', sans-serif;
+   font-size: 35px;
+   padding-left:20px;
+ }
+
+ .nav_text{
+   margin:auto;
+ }
+/* welcome page___________________________________*/
+.welcome_heading{
+  font-size: 50px;
+  font-family: 'Bubbler One', sans-serif;
+text-align: center;
+  width: 700px;
+  display: flex;
+
+}
+.welcome_text{
+  width: 700px;
+  margin: auto;
+  text-align: justify;
+}
+
+.user {
+  width:700px;
+  margin: auto;
+}
+
+/* index page___________________________________*/
+
+ .index_container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.index_img{
+  height: 320px;
+  width: 310px;
+  margin: 10px;
+}
+
+
+/* show page___________________________________*/
+.show_pattern{
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 510px;
+height: 600px;
+margin: auto;
+}
+.pattern-photo{
+  height: 450px;
+  width: 510px;
+}
+.show_box{
+  margin: auto;
+  width: 500px;
+  height: 500px;
+}
+
+.heading{
+  margin: auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+.designer{
+font-size: 20px;
+}
+
+.show_border{
+  border-style: solid;
+  border-bottom: thin color:#7f7f7f;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-width: 1px;
+  border-collapse: separate;
+  border-spacing: 10px 50px;
+  margin-top: 20px;
+}
+/*yarn____________________________________*/
+.show_container{
+  margin: 80px;
+}
+
+.show_yarn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 510px;
+  height: 400px;
+  margin: auto;
+}
+.yarn_box{
+  margin: auto;
+}
+
+.show_body{
+text-align: justify;
+}
+.title_box{
+margin-top: 30px;
+}
+.yarn_title{
+  font-size: 20px;
+}
+/*forms_____________________________*/
+
+input{
+height:30px;
+}
+
+.update{
+  margin: 10px;
+}
+
+.new_pattern, .edit_pattern, .new_user{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+  padding: 20px;
+}

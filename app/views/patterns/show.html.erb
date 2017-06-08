@@ -1,19 +1,36 @@
 
+<p><%= link_to 'New Pattern', new_pattern_path %> | <%= link_to "Edit Pattern", edit_pattern_path(@pattern) %></p>
 
-<h2><%= @pattern.name %> <%= link_to "(edit)", edit_pattern_path(@pattern) %></h2>
-<h4><%= @pattern.designer_name %></h4>
-<%= image_tag @pattern.photo_url, class: "pattern-photo" %>
-<h4><%= @pattern.details_body %></h4>
+  <div class="heading">
+  <h2><%= @pattern.name %></h2>
+  </div>
+<div class="show_container">
+  <div class="show_pattern">
+    <div>
+    <h4 class="designer"><%= link_to @pattern.designer_name, src='https://www.etsy.com/shop/Mbhfy'%> </h4>
+    </div>
+    <div class="show_box">
+    <%= image_tag @pattern.photo_url, class: "pattern-photo" %>
+    </div>
+    <div class="show_body">
+    <h4><%= @pattern.details_body %></h4>
+    <div><p class="show_border"></p></div>
+  </div>
+  </div>
+</div>
 
-<h4>Yarn</h4>
-<div>
-  <% @pattern.yarns.each do |yarn| %>
-      <img src="<%= yarn.yarn_url %>"/>
+  <div class="show_yarn">
+    <div class="title_box">
+      <h2 class="yarn_title">Yarn</h2>
+    </div>
+      <% @pattern.yarns.each do |yarn| %>
+    <div class="yarn_box">
+      <img class="yarn_img" src="<%= yarn.yarn_url %>"/>
+    </div>
+    <div class="yarn_details">
       <p><%= yarn.name %></p>
       <p><%= yarn.yards %></p>
-<p data-no-turbolink>
-  <%= link_to 'Edit Yarn', edit_pattern_yarn_path(@pattern) %> |
-  <%= link_to 'Remove Yarn', [yarn.pattern, yarn],
- method: :delete, data: {confirm: 'Are you sure, you want to delete this yarn'} %></p>
-</div>
+
+    </div>
+  </div>
   <% end %>

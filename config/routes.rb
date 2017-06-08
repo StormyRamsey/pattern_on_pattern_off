@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-   root to: 'app#views#patterns#index'
+  get 'welcome/index'
+  devise_for :users
+  root to: 'welcome#index'
 
-    resources :patterns do
-      resources :yarns, except: [:index]
+  resources :patterns do
+    resources :yarns
     end
 
 end

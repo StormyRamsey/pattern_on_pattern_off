@@ -1,12 +1,16 @@
+<p><%= link_to 'New Pattern', new_pattern_path %></p>
+<div class="heading">
 <h1>Patterns</h1>
+</div>
+<div class="index_container">
 
-<ul>
   <% @patterns.each do |pattern| %>
-  <li>
+  <div>
     <a href="/patterns/<%= pattern.id %>">
-      <%= pattern.name %>
+      <img class="index_img" src="<%= pattern.photo_url %>"/>
+      <h4><%= pattern.name %></h4>
     </a>
-  </li>
+      </div>
   <% end %>
-</ul>
-<%= link_to 'New Pattern', new_pattern_path %>
+
+</div>

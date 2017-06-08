@@ -1,5 +1,8 @@
+<div class="heading">
 <h1>Edit Pattern</h1>
+</div>
 
+<div class="edit_form">
 <%= form_for @pattern do |f| %>
 
   <%= f.label :name %>
@@ -14,9 +17,10 @@
   <%= f.label :details %>
   <%= f.text_field :details_body %>
 
-  <%= f.submit %>
+  <%= f.submit class: "update" %>
 <% end %>
 
 <%= form_for @pattern, method: :delete do |f| %>
   <%= f.submit "Delete!", class: "delete" %>
 <% end %>
+</div>
