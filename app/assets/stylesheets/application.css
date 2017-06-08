@@ -118,7 +118,7 @@ font-size: 20px;
 
 .show_border{
   border-style: solid;
-  border-bottom: thin color:#7f7f7f;
+  border-bottom: thin #7f7f7f;
   border-top: none;
   border-right: none;
   border-left: none;
