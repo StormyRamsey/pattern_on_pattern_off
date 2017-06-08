@@ -18,19 +18,3 @@
   </div>
   </div>
 </div>
-
-  <div class="show_yarn">
-    <div class="title_box">
-      <h2 class="yarn_title">Yarn</h2>
-    </div>
-      <% @pattern.yarns.each do |yarn| %>
-    <div class="yarn_box">
-      <img class="yarn_img" src="<%= yarn.yarn_url %>"/>
-    </div>
-    <div class="yarn_details">
-      <p><%= yarn.name %></p>
-      <p><%= yarn.yards %></p>
-
-    </div>
-  </div>
-  <% end %>

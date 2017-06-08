@@ -13,7 +13,7 @@ class YarnsController < ApplicationController
 
   def edit
       @pattern = Pattern.find(params[:pattern_id])
-
+      @yarn = @yarn.pattern
     end
 
     def update
@@ -27,6 +27,11 @@ class YarnsController < ApplicationController
       end
     end
 
+    def destroy
+      @yarn = Yarn.find(params[:id])
+      @yarn.destroy
+      redirect_to @yarn.pattern
+    end
 
   private
     def yarn_params
