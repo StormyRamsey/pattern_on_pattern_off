@@ -4,5 +4,5 @@ POPO is an application that allows crochet lovers to view and read about garment
 
 Technology used: HTML, CSS, Ruby on Rails.
 
-Installation instruction: Fork Repo and Clone it to your choosen dicectory.
+Installation instruction: Fork Repo and Clone it to your choosen directory.
 
