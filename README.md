@@ -1,25 +1,8 @@
-# README
+# Pattern_On_Pattern_Off 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+POPO is an application that allows crochet lovers to view and read about garments and blankets designed by Mbhfy.com. Crochet lovers can also purchase the featured crochet patterns from Mbhfy's Etsy shop. Lovers can sign-up for an account and share their crochet patterns.
 
-Things you may want to cover:
+Technology used: HTML, CSS, Ruby on Rails.
 
-* Ruby version
+Installation instruction: Fork Repo and Clone it to your choosen dicectory.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# pattern_on_pattern_off
